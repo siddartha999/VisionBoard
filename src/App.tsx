@@ -1,4 +1,6 @@
+import { Route, Routes } from 'react-router'
 import './App.css'
+import Home from './Home'
 
 function App() {
 
@@ -14,22 +16,9 @@ function App() {
       </div>
 
 
-      <div className='p-4'>
-
-        <p className='text-2xl'>Overview:</p>
-
-        <p className='text-xl pt-4'>1) Components:</p>
-        <p className='xl pt-2'>Reading</p>
-        <p className='xl pt-2'>Writing</p>
-        <p className='xl pt-2'>Training</p>
-        <p className='xl pt-2'>Listening</p>
-        <p className='xl pt-2'>Memories</p>
-        <p className='xl pt-2'>Gaming</p>
-
-        <p className='text-xl pt-4'>2) Customizable themes</p>
-
-        <p className='text-xl pt-4'>3) Timeline</p>
-      </div>
+      <Routes>
+        <Route path='/' element={<Home />} />
+      </Routes>
 
     </>
   )
