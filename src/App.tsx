@@ -1,6 +1,7 @@
 import { Route, Routes } from 'react-router'
 import './App.css'
 import Home from './Home'
+import { DBDLanding } from './pages/DayByBay'
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
 
       <Routes>
         <Route path='/' element={<Home />} />
+        <Route path='/dbd' element={<DBDLanding />} />
       </Routes>
 
     </>
