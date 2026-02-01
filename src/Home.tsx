@@ -2,7 +2,7 @@ import { NavLink } from "react-router";
 
 const Home = () => {
     return (
-        <div id="Home" className="mt-16">
+        <div id="Home" className="mt-8">
             <div id="home_components" className="grid grid-cols-1 lg:grid-cols-3 w-[80%] mx-auto gap-4 lg:gap-8">
                 <div id="journal" className="h-40 lg:h-80 bg-blue-700 cursor-pointer hover:bg-blue-800">
                     <p className="text-2xl text-center pt-15 lg:pt-30">The Journal</p>
