@@ -1,9 +1,10 @@
-import { NavLink, useLocation, useParams } from "react-router";
+import { NavLink, useLocation, useNavigate, useParams } from "react-router";
 import { getDayName, getLastDayNumberOfMonth } from "../../utils/helper";
 
 const DBDDaily = () => {
     const {month, year} = useParams();
     const location = useLocation();
+    const navigate = useNavigate();
 
     /**
      * Returns a list of days in a given month.
@@ -20,7 +21,7 @@ const DBDDaily = () => {
 
     return (
         <div className="mt-8"   >
-            <p className="text-2xl pl-4">{month} {year}</p>
+            <p className="text-2xl pl-4 cursor-pointer text-blue-400" onClick={() => navigate(`/dbd/${year}`)}>{`<`} {year}</p>
             <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-7 w-[80%] mx-auto mt-4 gap-4">
                 {
                     constructDaysList(month ?? '', year ?? '').map(day => {

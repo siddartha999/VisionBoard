@@ -35,9 +35,10 @@ export const getDayName = (targetYear: string, month: string, date: number): DAY
     const originYear = 2012; // 2012 Jan 1, Sunday
     const numOfLeapYears = Math.floor((targetYearNum - originYear) / 4);
     const monthIndex = MONTHS_IN_ORDER.findIndex(m => month === m);
-    let days = DAYS_IN_YEAR_PER_MONTH_RUNNING_COUNT[monthIndex] + date + numOfLeapYears;
+    let days = (monthIndex === 0 ? 0 : DAYS_IN_YEAR_PER_MONTH_RUNNING_COUNT[monthIndex - 1] ) + date + numOfLeapYears;
     if ((targetYearNum % 4 === 0) && monthIndex > 1) {
         days += 1;
     }
+    days += (366 % 7) * ((targetYearNum - originYear) % 7);
     return DAY_NAMES_IN_ORDER[days % 7];
 };
