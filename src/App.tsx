@@ -1,7 +1,7 @@
 import { NavLink, Route, Routes } from 'react-router'
 import './App.css'
 import Home from './Home'
-import { DBDDaily, DBDLanding, DBDYear } from './pages/DayByBay'
+import { DayView, DBDDaily, DBDLanding, DBDYear } from './pages/DayByBay'
 
 function App() {
 
@@ -24,6 +24,7 @@ function App() {
         <Route path='/dbd' element={<DBDLanding />} />
         <Route path='/dbd/:year' element={<DBDYear />} />
         <Route path='/dbd/:year/:month' element={<DBDDaily />} />
+        <Route path='/dbd/:year/:month/:day' element={<DayView />} />
       </Routes>
 
     </>

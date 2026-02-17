@@ -20,7 +20,7 @@ const DBDDaily = () => {
     };
 
     return (
-        <div className="mt-8"   >
+        <div className="mt-8">
             <p className="text-2xl pl-4 cursor-pointer text-blue-400" onClick={() => navigate(`/dbd/${year}`)}>{`<`} {year}</p>
             <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-7 w-[80%] mx-auto mt-4 gap-4">
                 {

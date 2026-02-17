@@ -1,14 +1,15 @@
-import { NavLink, useLocation, useParams } from "react-router";
+import { NavLink, useLocation, useNavigate, useParams } from "react-router";
 import { MONTH } from "../../utils/Constants";
 
 const DBDYear = () => {
     const {year} = useParams();
     const location = useLocation();
+    const navigate = useNavigate();
 
     return (
         <div id="DayByDay_year" className="mt-8">
             <div className="pl-4 text-2xl">
-                <p>{year}</p>
+                <p className="text-2xl pl-4 cursor-pointer text-blue-400" onClick={() => navigate(`/dbd`)}>{`<`} {year}</p>
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-3 w-[80%] mx-auto gap-4 lg:gap-8 mt-4">
                 {
